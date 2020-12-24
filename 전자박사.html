@@ -5,9 +5,23 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="style.css">
 </head>
+<script>
+	function setColor(color){
+		var alist=document.querySelectorAll('a');
+		var i=0;
+		while(i<alist.length){
+			alist[i].style.color=color;
+			i=i+1;
+		}
+	}
+</script>
 <body>
+<input type ="button" value="Hello" onclick="
+	alert('전자박사로봇교실에 오신 걸 환영합니다')">
 <h1><a href="https://scienworld.modoo.at/">전자박사로봇교실</a></h1>
 <div id="grid">
+
+
 <ol>
 	<li><a href="1.html">로봇</a></li>
 	<li><a href="3.html">코딩</a></li>
@@ -29,5 +43,26 @@
 	</p>
 </div>
 </div>
+
+
+<input type="button" value="night" onclick="
+		var target=document.querySelector('body');
+		if(this.value === 'night'){
+		target.style.backgroundColor='black';
+		target.style.color='white';
+		this.value = 'day';
+		
+		setColor('powderblue');
+		
+		}else{
+		target.style.backgroundColor='white';
+		target.style.color='black';
+		this.value = 'night';
+		
+		setColor('purple');
+		
+		}
+	">
+	
 </body>
 </html>
